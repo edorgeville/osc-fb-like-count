@@ -4,6 +4,7 @@
   "description": "",
   "main": "osc-fb-like-count.js",
   "scripts": {
+    "start": "node osc-fb-like-count.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

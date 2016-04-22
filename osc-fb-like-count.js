@@ -9,9 +9,11 @@ fblc.client_secret = process.env.FB_APP_SECRET;
 
 // fblc.debug = true;
 
-setInterval(function(){
+function loop(){
   fblc.get(process.env.FB_ID, function(count){
     console.log(count);
     oscClient.send('/' + 'count', count);
   });
-}, process.env.INTERVAL || 5000);
+}
+loop();
+setInterval(loop, process.env.INTERVAL || 5000);
